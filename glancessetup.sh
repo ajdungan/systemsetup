@@ -1,6 +1,6 @@
 #!/bin/bash
 #must run as root!
-cat << 'EOF' >> /etc/systemd/system/glances.service
+cat < 'EOF' > /etc/systemd/system/glances.service
 [Unit]
 Description=Glances
 After=network.target
