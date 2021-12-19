@@ -1,12 +1,12 @@
 #!/bin/bash
 #must run as root!
-cat < 'EOF' > /etc/systemd/system/glances.service
+cat << 'EOF' >> /etc/systemd/system/glances.service
 [Unit]
 Description=Glances
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/glances -w
+ExecStart=/usr/local/bin/glances -w #web on 0.0.0.0:61208 (local or system ip for network)
 Restart=on-abort
 RemainAfterExit=yes
 
@@ -19,7 +19,7 @@ sudo systemctl enable glances.service
 
 #start service
 sudo systemctl start glances.service
-
+ #web on 0.0.0.0:61208 (local or system ip for network)
 
 ############references
 #https://github.com/nicolargo/glances/wiki/Start-Glances-through-Systemd
