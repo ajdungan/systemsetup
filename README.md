@@ -6,6 +6,11 @@
 # ubuntu/debian
 bash -c 'sudo apt update; sudo apt install -y wget curl git; cd ~/scripts; git clone https://github.com/ajdungan/systemsetup.git; cd systemsetup; chmod 774 *.sh'
 
+#debloat and configure firefox
+see Firefox configuration hardening user.js page, use the relaxed version
+https://github.com/pyllyukko/user.js/tree/relaxed
+
+
 # Windows
 ## install chocolatey
 in powerShell -> Run As Administrator
