@@ -3,7 +3,8 @@
 
 #####install glances via pip
 apt update
-apt install python-pip -y
+apt install python-pip -y 
+pip install py3nvml
 pip install 'glances[action,browser,cloud,cpuinfo,docker,export,folders,gpu,graph,ip,raid,snmp,web,wifi]'
 
 #alternative install script
