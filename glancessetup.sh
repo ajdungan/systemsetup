@@ -6,7 +6,7 @@ Description=Glances
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/glances -w #web on 0.0.0.0:61208 (local or system ip for network)
+ExecStart=/usr/local/bin/glances -w
 Restart=on-abort
 RemainAfterExit=yes
 
