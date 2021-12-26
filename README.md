@@ -27,3 +27,5 @@ choco feature enable -n=allowGlobalConfirmation
 mkdir C:\miner
 cd C:\miner
 wget -O miner.zip  https://github.com/trexminer/T-Rex/releases/download/0.24.8/t-rex-0.24.8-win.zip
+Add-Type -A 'System.IO.Compression.FileSystem';
+ [IO.Compression.ZipFile]::ExtractToDirectory('C:\miner\miner.zip', 'C:\miner')
