@@ -20,8 +20,10 @@ set global setting to accept all licensing etc without confirmation
 
 choco feature enable -n=allowGlobalConfirmation
 
-
-
-# Install chocolatey
 ## For more info on chocolatey, see: https://chocolatey.org/docs/getting-started
 ## For more info on this install approach: https://chocolatey.org/install#individual
+
+# trex miner
+mkdir C:\miner
+cd C:\miner
+wget -O miner.zip  https://github.com/trexminer/T-Rex/releases/download/0.24.8/t-rex-0.24.8-win.zip
