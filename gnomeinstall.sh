@@ -10,4 +10,7 @@ sudo apt install gnome-tweaks -y
 
 
 #apps
-sudo apt install gparted arandr -y
+sudo apt install gparted arandr synaptic -y
+
+#apps to remove
+sudo apt purge snapd -y
