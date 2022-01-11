@@ -8,6 +8,11 @@
 bash -c 'sudo apt update; sudo apt install -y wget curl git; cd ~/scripts; git clone https://github.com/ajdungan/systemsetup.git; cd systemsetup; chmod 774 *.sh'
 ```
 
+#setup rescue/backup distro
+sudo apt install grml-rescueboot -y
+cd /boot/grml
+sudo wget -c -O rescuezilla
+
 #debloat and configure firefox
 see Firefox configuration hardening user.js page, use the relaxed version
 https://github.com/pyllyukko/user.js/tree/relaxed
