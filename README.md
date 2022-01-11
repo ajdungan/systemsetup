@@ -7,11 +7,23 @@
 ```
 bash -c 'sudo apt update; sudo apt install -y wget curl git; cd ~/scripts; git clone https://github.com/ajdungan/systemsetup.git; cd systemsetup; chmod 774 *.sh'
 ```
+## setup rescue/backup distro
+The grml-rescueboot package enables grub to boot directly from .iso distro images saved locally without having to write them to a USB or other drive. By default it will just look for iso files in /boot/grml, so save an of your favorate rescue/imaging/cloning/other live distros to boot from. one downoaded simply update grub with the update-grub command and it will automatically add an option to boot from the rescue distro downloaded. This is also possible to configure manualling by editing some of the grub configuration files and manually pointing them to a distro image...but much easier to just install grml-rescueboot.
 
-#setup rescue/backup distro
+My recommended rescue distros are 
+1) rescuezilla- easy/user friendly imaging and cloning, but a bit bloated in size (but not apps) uses full 1+ gig ubuntu base
+2) clonezilla- less user friendly (no desktop environment/terminal based) but very powerfull and lightweight. Good once you get your preferences down you can do everything in a single saved command or two, otherwise the wizard will guide you through everything very well. ~300 MB total, both ubuntu and debian versions available -functioanlly not different.
+3) Sparklinux rescue edition, loads of great apps, debian based 
+
+```
 sudo apt install grml-rescueboot -y
 cd /boot/grml
-sudo wget -c -O rescuezilla
+sudo wget -c -O rescuezilla.iso https://github.com/rescuezilla/rescuezilla/releases/download/2.3.1/rescuezilla-2.3.1-64bit.focal.iso
+sudo wget -c -O clonezilla.iso https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stable/2.8.1-12/clonezilla-live-2.8.1-12-amd64.iso
+sudo wget -c -O clonezilla.iso https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stable/2.8.1-12/clonezilla-live-2.8.1-12-amd64.iso
+sudo update-grub
+
+```
 
 #debloat and configure firefox
 see Firefox configuration hardening user.js page, use the relaxed version
