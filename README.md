@@ -13,14 +13,13 @@ The grml-rescueboot package enables grub to boot directly from .iso distro image
 My recommended rescue distros are 
 1) rescuezilla- easy/user friendly imaging and cloning, but a bit bloated in size (but not apps) uses full 1+ gig ubuntu base
 2) clonezilla- less user friendly (no desktop environment/terminal based) but very powerfull and lightweight. Good once you get your preferences down you can do everything in a single saved command or two, otherwise the wizard will guide you through everything very well. ~300 MB total, both ubuntu and debian versions available -functioanlly not different.
-3) Sparklinux rescue edition, loads of great apps, debian based 
+3) Sparkylinux rescue edition, loads of great apps, debian based 
 
 ```
 sudo apt install grml-rescueboot -y
 cd /boot/grml
-sudo wget -c -O rescuezilla.iso https://github.com/rescuezilla/rescuezilla/releases/download/2.3.1/rescuezilla-2.3.1-64bit.focal.iso
-sudo wget -c -O clonezilla.iso https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stable/2.8.1-12/clonezilla-live-2.8.1-12-amd64.iso
-sudo wget -c -O clonezilla.iso https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stable/2.8.1-12/clonezilla-live-2.8.1-12-amd64.iso
+sudo wget -c -O sparkylinux_rescue.iso https://downloads.sourceforge.net/project/sparkylinux/rescue/sparkylinux-2021.12-x86_64-rescue.iso
+sudo wget -c -O clonezilla.iso https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_alternative/20220103-impish/clonezilla-live-20220103-impish-amd64.zip
 sudo update-grub
 
 ```
