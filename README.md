@@ -39,8 +39,14 @@ Next: set global setting to accept all licensing etc without confirmation
 ```
 choco feature enable -n=allowGlobalConfirmation
 ```
-## For more info on chocolatey, see: https://chocolatey.org/docs/getting-started
-## For more info on this install approach: https://chocolatey.org/install#individual
+### For more info on chocolatey, see: https://chocolatey.org/docs/getting-started
+### For more info on this install approach: https://chocolatey.org/install#individual
+
+## auto login
+run: 
+```
+reg ADD “HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device” /v DevicePasswordLessBuildVersion /t REG_DWORD /d 0 /f
+```
 
 # trex miner
 ```
