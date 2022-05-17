@@ -38,6 +38,30 @@ DefaultTimeoutStopSec=8s
 ```
 
 
+# custom system startup scripts
+
+script location:
+```
+/usr/local/sbin/
+```
+
+systemd service for script
+```
+cd /etc/systemd/system
+
+cat> nvidia_settings.service
+###########
+[Unit]
+Description=nvidia settings on boot (manually defined in script)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nvidia_boot.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
 
 # debloat and configure firefox
 see Firefox configuration hardening user.js page, use the relaxed version
