@@ -31,7 +31,7 @@ sudo update-grub
  ```
  nano /etc/systemd/system.conf  
  ```
-to (normally uncomment if default and change to desires seconds)
+to (normally uncomment if default and change to desired seconds)
 ```
 DefaultTimeoutStartSec=8s
 DefaultTimeoutStopSec=8s
