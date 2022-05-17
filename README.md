@@ -24,6 +24,21 @@ sudo update-grub
 
 ```
 
+# limit timeout for starting/stopping systemd serices during boot/poweroff 
+ 
+ eg. network is unplugged by default it will wait 90 secs waiting for it.
+ edit system.conf
+ ``
+ nano /etc/systemd/system.conf  
+ ``
+to (normally uncomment if default and change to desires seconds)
+``
+DefaultTimeoutStartSec=8s
+DefaultTimeoutStopSec=8s
+``
+
+
+
 #debloat and configure firefox
 see Firefox configuration hardening user.js page, use the relaxed version
 https://github.com/pyllyukko/user.js/tree/relaxed
