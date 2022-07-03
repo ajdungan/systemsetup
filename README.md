@@ -26,7 +26,7 @@ sudo update-grub
 
 # limit timeout for starting/stopping systemd serices during boot/poweroff 
  
- eg. network is unplugged by default it will wait 90 secs waiting for it.
+ eg. network is unplugged by default it will wait 90 secs waiting for it. (timeout for "a stop job is running" and "??a start job is running?")
  edit system.conf
  ```
  nano /etc/systemd/system.conf  
