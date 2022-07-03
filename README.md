@@ -37,6 +37,8 @@ DefaultTimeoutStartSec=8s
 DefaultTimeoutStopSec=8s
 ```
 
+Also change indivual services in  /etc/systemd/system and /lib/systemd/system/ , run grep -ri timeout
+change NetworkManager-wait-online.service nvidia-persistenced.service 
 
 # custom system startup scripts
 
